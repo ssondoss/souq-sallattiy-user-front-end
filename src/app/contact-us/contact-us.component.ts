@@ -45,6 +45,7 @@ export class ContactUsComponent implements OnInit {
             showConfirmButton: false,
             timer: 1500,
           });
+          this.contactForm.reset();
         });
     else this.contactForm.markAllAsTouched();
   }

@@ -91,6 +91,7 @@ export class CheckoutComponent implements OnInit {
             showConfirmButton: false,
             timer: 1500,
           });
+          this.orderForm.reset();
         });
     else if (this.products.length == 0) {
       swal.fire({

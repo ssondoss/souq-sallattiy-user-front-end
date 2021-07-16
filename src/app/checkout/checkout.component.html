@@ -105,7 +105,7 @@
                   type="text"
                   maxlength="100"
                   required
-                  class="form-control"
+                  class="form-control mb-1"
                   formControlName="name"
                 />
                 <mat-error
@@ -121,13 +121,19 @@
                 <label for="">رقم الهاتف</label>
                 <input
                   type="tel"
-                  class="form-control"
+                  class="form-control mb-1"
                   formControlName="phone"
                   required
                   maxlength="12"
+                  minlength="10"
                 />
                 <mat-error *ngIf="orderForm.controls.phone.hasError('pattern')">
                   لا يمكن أن يحتوي رقم الهاتف إلا على أرقام
+                </mat-error>
+                <mat-error
+                  *ngIf="orderForm.controls.phone.hasError('minlength')"
+                >
+                  أقل طول لرقم الهاتف هو 10 أرقام
                 </mat-error>
                 <mat-error
                   *ngIf="
@@ -146,7 +152,7 @@
 
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control mb-1"
                   value="الأردن"
                   disabled
                 />
@@ -185,7 +191,7 @@
                 required
                 formControlName="address"
                 rows="3"
-                class="w-100 rounded form-control"
+                class="w-100 rounded form-control mb-1"
                 maxlength="500"
               ></textarea>
               <mat-error
