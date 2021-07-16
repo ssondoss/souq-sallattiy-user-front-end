@@ -1,0 +1,337 @@
+<div class="bg-fa px-0">
+  <div class="container-small px-0">
+    <div class="pt-5 py-3 text-right">
+      <b class="h4">جميع الفئات </b>
+      <small>( {{ products.length }} سلعة ) </small>
+    </div>
+    <!-- <div class="col-md-2 col-4 text-right f-media-16 px-0">
+        <div class="form-check px-0">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+          />
+          <label class="form-check-label px-4" for="flexCheckDefault">
+            عروض
+          </label>
+        </div>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckChecked"
+            checked
+          />
+          <label class="form-check-label px-4" for="flexCheckChecked">
+            هدايا
+          </label>
+        </div>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckChecked"
+            checked
+          />
+          <label class="form-check-label px-4" for="flexCheckChecked">
+            ألعاب
+          </label>
+        </div>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckChecked"
+            checked
+          />
+          <label class="form-check-label px-4" for="flexCheckChecked">
+            مستلزمات أطفال
+          </label>
+        </div>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckChecked"
+            checked
+          />
+          <label class="form-check-label px-4" for="flexCheckChecked">
+            ملابس
+          </label>
+        </div>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckChecked"
+            checked
+          />
+          <label class="form-check-label px-4" for="flexCheckChecked">
+            مستحضرات التجميل
+          </label>
+        </div>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckChecked"
+            checked
+          />
+          <label class="form-check-label px-4" for="flexCheckChecked">
+            عطور
+          </label>
+        </div>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckChecked"
+            checked
+          />
+          <label class="form-check-label px-4" for="flexCheckChecked">
+            نظارات
+          </label>
+        </div>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckChecked"
+            checked
+          />
+          <label class="form-check-label px-4" for="flexCheckChecked">
+            إكسسوارات
+          </label>
+        </div>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckChecked"
+            checked
+          />
+          <label class="form-check-label px-4" for="flexCheckChecked">
+            شنط ومحافظ
+          </label>
+        </div>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckChecked"
+            checked
+          />
+          <label class="form-check-label px-4" for="flexCheckChecked">
+            أجهزة كهربائية
+          </label>
+        </div>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckChecked"
+            checked
+          />
+          <label class="form-check-label px-4" for="flexCheckChecked">
+            أدوات منزلية
+          </label>
+        </div>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckChecked"
+            checked
+          />
+          <label class="form-check-label px-4" for="flexCheckChecked">
+            ساعات
+          </label>
+        </div>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckChecked"
+            checked
+          />
+          <label class="form-check-label px-4" for="flexCheckChecked">
+            إلكترونيات
+          </label>
+        </div>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckChecked"
+            checked
+          />
+          <label class="form-check-label px-4" for="flexCheckChecked">
+            نثريات
+          </label>
+        </div>
+      </div> -->
+    <div class="row mx-0 border px-0" dir="rtl">
+      <div
+        class="
+          d-flex
+          flex-column
+          h-auto
+          col-xl-3 col-lg-4 col-md-6
+          bg-white
+          border-left
+          px-0
+          text-right
+          border-bottom
+        "
+        *ngFor="let product of products"
+      >
+        <div class="" style="position: relative">
+          <div class="overlay">
+            <img
+              [src]="getImage(product.images[0])"
+              width="100%"
+              height="auto"
+              class="product-img"
+              alt=""
+            />
+            <button
+              class="btn btn-danger btn-sm middle"
+              [routerLink]="['/product-details']"
+              [queryParams]="{ id: product.id }"
+            >
+              تفاصيل المنتج
+            </button>
+          </div>
+        </div>
+        <div class="p-md-3 p-2 text-right pb-0">
+          <div class="h5 break">{{ product.titleArabic }}</div>
+
+          <div class="text-muted break">
+            {{ product.descArabic }}
+          </div>
+        </div>
+        <div class="font-weight-bold text-danger px-md-3 px-2">
+          {{ product.price }}
+          دينار أردني
+        </div>
+        <div class="text-muted px-md-3 px-2 pt-2">
+          {{ product.count }} قطع متوفرة
+        </div>
+        <div class="p-md-3 p-2 mt-auto">
+          <button
+            class="btn btn-green w-100"
+            *ngIf="!inCart(product)"
+            (click)="addToCart(product, 1)"
+          >
+            أضف إلى العربة
+            <img
+              src="../../assets/add-to-cart.svg"
+              height="25"
+              class="mx-2 my-auto"
+              width="auto"
+              alt=""
+            />
+          </button>
+          <div
+            class="border row mx-0 h-55 mt-2 rounded"
+            *ngIf="inCart(product)"
+            style="box-shadow: inset 0 0 12px #e2e1e1"
+          >
+            <div
+              class="col-2 border-left h-100 d-flex"
+              (click)="editQuantity(product, 1)"
+            >
+              <i class="fa fa-plus m-auto" aria-hidden="true"></i>
+            </div>
+            <div
+              class="
+                col-8
+                m-auto
+                text-center
+                color-green
+                font-weight-bold
+                f-20
+                px-0
+              "
+            >
+              <small class="mx-1"> ({{ getQuantity(product) }})</small> في
+              العربة
+            </div>
+            <div
+              class="col-2 h-100 d-flex border-right"
+              (click)="editQuantity(product, -1)"
+            >
+              <i class="fa fa-minus m-auto" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="col-3 border-left px-0 text-right">
+              <img
+                src="../../assets/banner-1-ar.jpg"
+                width="100%"
+                height="270"
+                alt=""
+              />
+              <div class="p-3 text-right">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus!
+              </div>
+              <div class="h5 px-3 font-weight-bold text-danger">
+                12 دينار أردني
+              </div>
+              <div class="text-muted px-3">5 قطع متوفرة</div>
+              <div class="p-3">
+                <button class="btn btn-green w-100">
+                  أضف إلى العربة
+                  <img
+                    src="../../assets/add-to-cart.svg"
+                    height="25"
+                    class="mx-2 my-auto"
+                    width="auto"
+                    alt=""
+                  />
+                </button>
+                <div
+                  class="border row mx-0 h-55 mt-2 rounded"
+                  style="box-shadow: inset 0 0 12px #e2e1e1"
+                >
+                  <div class="col-2 border-left h-100 d-flex">
+                    <i class="fa fa-plus m-auto" aria-hidden="true"></i>
+                  </div>
+                  <div
+                    class="
+                      col-8
+                      m-auto
+                      text-center
+                      color-green
+                      font-weight-bold
+                      f-20
+                    "
+                  >
+                    <small class="mx-1"> (1)</small> في العربة
+                  </div>
+                  <div class="col-2 h-100 d-flex border-right">
+                    <i class="fa fa-plus m-auto" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+    </div>
+  </div>
+</div>

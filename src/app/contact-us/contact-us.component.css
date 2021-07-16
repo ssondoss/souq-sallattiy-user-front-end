@@ -1,0 +1,30 @@
+.shadow-dark {
+  box-shadow: 0px 0px 8px #b1b1b165;
+}
+
+.container-box {
+  height: 200px;
+  width: 120%;
+  padding: 6.5px;
+}
+.container-box:hover {
+  padding: 0;
+
+  transition: 0.5s;
+  box-shadow: 0px 0px 8px #dfdfdf;
+}
+@media screen and (max-width: 550px) {
+  .t-huge {
+    font-size: 30px !important;
+    line-height: 52px !important;
+  }
+  .mt-m50 {
+    margin-top: 50px !important;
+  }
+}
+.t-huge {
+  font-size: 50px;
+}
+.mt-m50 {
+  margin-top: -50px;
+}

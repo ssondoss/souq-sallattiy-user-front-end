@@ -1,0 +1,51 @@
+.cart-link:hover {
+  text-decoration: underline !important;
+  color: black;
+  background-color: #ecececb4;
+}
+.cart-link {
+  text-decoration: none !important;
+}
+:host::ng-deep popover-content::ng-deep .popover-body {
+  padding-right: 5px !important;
+  padding-left: 5px !important;
+}
+/* :host::ng-deep popover-content::ng-deep .popover-body {
+  background-color: antiquewhite;
+  margin-right: -600px !important;
+}
+:host::ng-deep popover-content::ng-deep .bs-popover-bottom {
+} */
+:host >>> .popover {
+  width: 900px !important;
+  margin-right: -300px !important;
+}
+.contact {
+  text-decoration: none !important;
+}
+.contact:hover {
+  text-decoration: underline !important;
+}
+.socail:hover {
+  font-size: 16px !important;
+}
+.navbar-nav a {
+  color: black !important;
+  text-decoration: none !important;
+}
+.numOfProducts {
+  position: absolute !important;
+  top: 0 !important;
+  left: 47%;
+}
+/* @media screen and (max-width: 769px) and (min-width: 700px) {
+  .numOfProducts {
+    position: absolute !important;
+    top: 0 !important;
+    left: 48% !important;
+  } */
+.search:focus {
+  box-shadow: none !important;
+  border: 1.2px solid rgb(150, 149, 149);
+  direction: rtl;
+}

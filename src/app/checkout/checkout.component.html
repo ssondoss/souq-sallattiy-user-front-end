@@ -1,0 +1,220 @@
+<div class="bg-fa" dir="rtl">
+  <div class="container">
+    <div class="row mx-0 pt-5">
+      <div class="col-md-6 text-right">
+        <div class="h3 font-weight-bold">
+          عربة التسوق <span class="h4"> ({{ getProductsCount() }}) </span>
+        </div>
+        <div class="mt-4" *ngIf="products.length == 0">
+          <div class="alert alert-warning">عربة التسوق فارغة !</div>
+        </div>
+        <div
+          class="row mx-0 bg-white p-3 mt-4 shadow-light"
+          *ngFor="let product of products"
+        >
+          <div class="col-lg-2 col-4 px-0">
+            <img
+              [src]="getImage(product.product.images[0])"
+              alt=""
+              height="100%"
+              width="100%"
+            />
+          </div>
+          <div class="col-lg-7 col-8">
+            <div class="h5 break">{{ product.product.titleArabic }}</div>
+            <div class="text-muted pt-0 mt-0 break">
+              {{ product.product.descArabic }}
+            </div>
+            <div class="mt-2 text-danger font-weight-bold">11 دينار أردني</div>
+          </div>
+          <div class="col-lg-3 text-right row ml-auto mt-lg-0 mt-3 px-0">
+            <div class="col-6 mr-0 col-lg-12 px-lg-0 px-xl-2 px-3">
+              <div
+                class="row mx-0 px-0"
+                style="height: 40px; box-shadow: 0px 0px 8px #e9e8e8"
+              >
+                <div
+                  class="border col-4 d-flex bg-light"
+                  (click)="editQuantity(product.product, -1)"
+                >
+                  <div class="m-auto">
+                    <i
+                      class="fa fa-minus text-muted mt-2"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+                <div class="border col-4 d-flex">
+                  <div class="m-auto">
+                    <div class="mt-1">{{ product.qty }}</div>
+                  </div>
+                </div>
+                <div
+                  class="border col-4 d-flex bg-light"
+                  (click)="editQuantity(product.product, 1)"
+                >
+                  <div class="m-auto">
+                    <i
+                      class="fa fa-plus text-muted mt-2"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+              <!-- <div
+                class="my-auto col-6 px-0"
+                style="text-align: left !important"
+              >
+                الكمية
+              </div> -->
+              <!-- <div class="col-6">
+                <select
+                  class="form-select w-100"
+                  aria-label="Default select example"
+                >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div> -->
+            </div>
+            <div class="mt-3 text-muted small col-6 col-lg-12">
+              {{ product.product.count }} قطع متوفرة
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-1"></div> -->
+      <div class="col-md-6 text-right pr-50 mt-md-0 mt-3">
+        <div class="bg-white p-md-4 p-3 shadow-light mb-3 rounded">
+          <div class="row mx-0 h5">
+            <div class="w-auto my-auto px-0 h4">المجموع :</div>
+            <div class="w-auto my-auto text-danger">
+              <span class="font-weight-bold">{{ getTotal() }}</span>
+              <span class="mx-2">دينار أردني</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white shadow-light p-md-4 p-3 rounded">
+          <div class="h5 text-center py-2">تفاصيل التوصيل</div>
+          <form [formGroup]="orderForm">
+            <div class="row mx-0 mt-4">
+              <div class="form-group col-md-6 pl-0">
+                <label for="">الاسم</label>
+                <input
+                  type="text"
+                  maxlength="100"
+                  required
+                  class="form-control"
+                  formControlName="name"
+                />
+                <mat-error
+                  *ngIf="
+                    orderForm.controls.name.errors?.required &&
+                    orderForm.controls.name.touched
+                  "
+                >
+                  هذا الحقل مطلوب
+                </mat-error>
+              </div>
+              <div class="form-group col-md-6 pl-0">
+                <label for="">رقم الهاتف</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  formControlName="phone"
+                  required
+                  maxlength="12"
+                />
+                <mat-error *ngIf="orderForm.controls.phone.hasError('pattern')">
+                  لا يمكن أن يحتوي رقم الهاتف إلا على أرقام
+                </mat-error>
+                <mat-error
+                  *ngIf="
+                    orderForm.controls.phone.errors?.required &&
+                    orderForm.controls.phone.touched
+                  "
+                >
+                  هذا الحقل مطلوب
+                </mat-error>
+              </div>
+            </div>
+
+            <div class="row mx-0 px-0 mt-4">
+              <div class="form-group col-6 px-1">
+                <label for="">الدولة</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  value="الأردن"
+                  disabled
+                />
+              </div>
+
+              <div class="form-group col-6 pl-0">
+                <label>المدينة</label>
+                <select class="form-control" formControlName="city" required>
+                  <option value="amman">عمان</option>
+                  <option value="balqaa">البلقاء</option>
+                  <option value="irbid">إربد</option>
+                  <option value="zarqaa">الزرقاء</option>
+                  <option value="ma'an">معان</option>
+                  <option value="tafela">الطفيلة</option>
+                  <option value="aqaba">العقبة</option>
+                  <option value="madaba">مادبا</option>
+                  <option value="ajloon">عجلون</option>
+                  <option value="jarash">جرش</option>
+                  <option value="karak">كرك</option>
+                  <option value="mafraq">مفرق</option>
+                </select>
+                <mat-error
+                  *ngIf="
+                    orderForm.controls.city.errors?.required &&
+                    orderForm.controls.city.touched
+                  "
+                >
+                  هذا الحقل مطلوب
+                </mat-error>
+              </div>
+            </div>
+
+            <div class="form-group mt-3">
+              <label for=""> تفاصيل العنوان</label>
+              <textarea
+                required
+                formControlName="address"
+                rows="3"
+                class="w-100 rounded form-control"
+                maxlength="500"
+              ></textarea>
+              <mat-error
+                *ngIf="
+                  orderForm.controls.address.errors?.required &&
+                  orderForm.controls.address.touched
+                "
+              >
+                هذا الحقل مطلوب
+              </mat-error>
+            </div>
+            <div class="form-group mt-3">
+              <label for="">ملاحظات إضافية</label>
+              <textarea
+                formControlName="notes"
+                maxlength="500"
+                rows="3"
+                class="w-100 rounded form-control"
+              ></textarea>
+            </div>
+            <div class="mt-4">
+              <button class="btn btn-green px-4" (click)="placeOrder()">
+                تأكيد الطلب
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white"></div>
+  </div>
+</div>

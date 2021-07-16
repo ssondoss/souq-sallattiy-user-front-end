@@ -1,0 +1,105 @@
+<div class="container-small bg-fa" dir="rtl" style="min-height: 60vh">
+  <div class="pt-5 py-3 text-right">
+    <b class="h4">{{ categories[categoryId - 1] }} </b>
+    <small>( {{ products.length }} سلعة ) </small>
+  </div>
+
+  <div class="row mx-0 border bg-white px-0">
+    <div
+      class="
+        col-lg-3 col-md-4
+        border-left
+        px-0
+        text-right
+        border-media-top
+        d-flex
+        flex-column
+      "
+      *ngFor="let product of products"
+    >
+      <div class="" style="position: relative">
+        <div class="overlay">
+          <img
+            [src]="getImage(product.images[0])"
+            width="100%"
+            height="auto"
+            class="product-img"
+            alt=""
+          />
+          <button
+            class="btn btn-danger btn-sm middle"
+            [routerLink]="['/product-details']"
+            [queryParams]="{ id: product.id }"
+          >
+            تفاصيل المنتج
+          </button>
+        </div>
+      </div>
+      <div class="p-md-3 p-2 text-right pb-0 break">
+        <div class="h5">{{ product.titleArabic }}</div>
+
+        <div class="text-muted break">
+          {{ product.descArabic }}
+        </div>
+      </div>
+      <div class="px-md-3 px-2 font-weight-bold text-danger">
+        {{ product.price }}
+        دينار أردني
+      </div>
+      <div class="text-muted px-md-3 px-2 pt-2">
+        {{ product.count }} قطع متوفرة
+      </div>
+      <div class="p-md-3 p-2 mt-auto">
+        <button
+          class="btn btn-green w-100"
+          *ngIf="!inCart(product)"
+          (click)="addToCart(product, 1)"
+        >
+          أضف إلى العربة
+          <img
+            src="../../assets/add-to-cart.svg"
+            height="25"
+            class="mx-2 my-auto"
+            width="auto"
+            alt=""
+          />
+        </button>
+        <div
+          class="border row mx-0 h-55 mt-2 rounded"
+          *ngIf="inCart(product)"
+          style="box-shadow: inset 0 0 12px #e2e1e1"
+        >
+          <div
+            class="col-2 border-left h-100 d-flex"
+            (click)="editQuantity(product, 1)"
+          >
+            <i class="fa fa-plus m-auto" aria-hidden="true"></i>
+          </div>
+          <div
+            class="
+              col-8
+              m-auto
+              text-center
+              color-green
+              font-weight-bold
+              f-20
+              px-0
+            "
+          >
+            <small class="mx-1"> ({{ getQuantity(product) }})</small> في العربة
+          </div>
+          <div
+            class="col-2 h-100 d-flex border-right"
+            (click)="editQuantity(product, -1)"
+          >
+            <i class="fa fa-minus m-auto" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="products.length == 0" class="alert alert-warning text-right mt-3">
+    لا يوجد منتجات في هذه الفئة حالياً .. يمكنك تصفح باقي الفئات المنتهية إلى
+    حين الانتهاء من هذه الفئة
+  </div>
+</div>

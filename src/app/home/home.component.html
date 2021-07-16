@@ -1,0 +1,707 @@
+<div class="container-small pt-md-5 pt-3 bg-fa">
+  <div class="row mx-0">
+    <div class="col-2 m-auto d-none d-xl-block">
+      <div class="text-center px-0">
+        <div class="h4 mb-5">
+          احصل على أفضل القطع بأفضل الأسعار على موقع سلتي
+        </div>
+        <button class="btn btn-green w-100" routerLink="/all-products">
+          تسوق الآن
+        </button>
+      </div>
+    </div>
+    <div class="col-xl-9 mb-md-5 px-0">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://darkgraphix.com/s_images/4.png"
+              class="d-block w-100 slide-img"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://darkgraphix.com/s_images/5.png"
+              class="d-block w-100 slide-img"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://darkgraphix.com/s_images/6.png"
+              class="d-block w-100 slide-img"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://darkgraphix.com/s_images/7.png"
+              class="d-block w-100 slide-img"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://darkgraphix.com/s_images/8.png"
+              class="d-block w-100 slide-img"
+              alt="..."
+            />
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev text-decoration-0"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <i class="fa fa-angle-left f-20" aria-hidden="true"></i>
+        </a>
+        <a
+          class="carousel-control-next text-decoration-0"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <i class="fa fa-angle-right f-20" aria-hidden="true"></i>
+        </a>
+      </div>
+      <!-- <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://darkgraphix.com/s_images/4.png"
+              class="d-block w-100 slide-img"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://darkgraphix.com/s_images/5.png"
+              class="d-block w-100 slide-img"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://darkgraphix.com/s_images/6.png"
+              class="d-block w-100 slide-img"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://darkgraphix.com/s_images/7.png"
+              class="d-block w-100 slide-img"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://darkgraphix.com/s_images/8.png"
+              class="d-block w-100 slide-img"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </button>
+      </div> -->
+    </div>
+  </div>
+  <div class="py-3"></div>
+  <div class="row mx-0 border border-bottom-5 bg-white py-4 px-3" dir="rtl">
+    <div
+      class="col-md-6 text-center mb-3 mb-md-0 category"
+      [routerLink]="['/category']"
+      [queryParams]="{ id: 1 }"
+    >
+      <img
+        src="https://darkgraphix.com/s_images/10.png"
+        alt=""
+        width="100%"
+        class="major-img"
+      />
+      <div class="text-center h5 py-2">عروض</div>
+    </div>
+    <div class="col-md-6 px-0">
+      <div class="row mx-0">
+        <div
+          class="col-6 category"
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 9 }"
+        >
+          <img
+            src="https://darkgraphix.com/s_images/22.png"
+            alt=""
+            width="100%"
+            class="m-0"
+            height="auto"
+          />
+          <div class="text-center h5 py-2">شنط ومحافظ</div>
+        </div>
+        <div
+          class="col-6 category"
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 13 }"
+        >
+          <img
+            src="https://darkgraphix.com/s_images/44.png"
+            alt=""
+            width="100%"
+            class="m-0"
+            height="auto"
+          />
+          <div class="text-center h5 py-2">هدايا</div>
+        </div>
+      </div>
+      <div class="row mx-0">
+        <div
+          class="col-6 category"
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 6 }"
+        >
+          <img
+            src="https://darkgraphix.com/s_images/33.png"
+            alt=""
+            width="100%"
+            class="m-0"
+            height="auto"
+          />
+          <div class="text-center h5 py-2">عطور</div>
+        </div>
+        <div
+          class="col-6 category"
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 14 }"
+        >
+          <img
+            src="https://darkgraphix.com/s_images/11.png"
+            alt=""
+            width="100%"
+            class="m-0"
+            height="auto"
+          />
+          <div class="text-center h5 py-2">ساعات</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-3"></div>
+  <div class="row mx-0 border border-bottom-5 bg-white py-4 px-3" dir="rtl">
+    <div
+      class="col-md-6 text-center mb-3 mb-md-0 category"
+      [routerLink]="['/category']"
+      [queryParams]="{ id: 1 }"
+    >
+      <img
+        src="https://darkgraphix.com/s_images/10.png"
+        alt=""
+        width="100%"
+        class="major-img"
+      />
+      <div class="text-center h5 py-2">عروض</div>
+    </div>
+    <div class="col-md-6 px-0">
+      <div class="row mx-0">
+        <div
+          class="col-6 category"
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 9 }"
+        >
+          <img
+            src="https://darkgraphix.com/s_images/22.png"
+            alt=""
+            width="100%"
+            class="m-0"
+            height="auto"
+          />
+          <div class="text-center h5 py-2">شنط ومحافظ</div>
+        </div>
+        <div
+          class="col-6 category"
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 13 }"
+        >
+          <img
+            src="https://darkgraphix.com/s_images/44.png"
+            alt=""
+            width="100%"
+            class="m-0"
+            height="auto"
+          />
+          <div class="text-center h5 py-2">هدايا</div>
+        </div>
+      </div>
+      <div class="row mx-0">
+        <div
+          class="col-6 category"
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 6 }"
+        >
+          <img
+            src="https://darkgraphix.com/s_images/33.png"
+            alt=""
+            width="100%"
+            class="m-0"
+            height="auto"
+          />
+          <div class="text-center h5 py-2">عطور</div>
+        </div>
+        <div
+          class="col-6 category"
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 14 }"
+        >
+          <img
+            src="https://darkgraphix.com/s_images/11.png"
+            alt=""
+            width="100%"
+            class="m-0"
+            height="auto"
+          />
+          <div class="text-center h5 py-2">ساعات</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-3"></div>
+  <div class="row mx-0 border border-bottom-5 bg-white py-4 px-3" dir="rtl">
+    <div
+      class="col-md-6 text-center mb-3 mb-md-0 category"
+      [routerLink]="['/category']"
+      [queryParams]="{ id: 1 }"
+    >
+      <img
+        src="https://darkgraphix.com/s_images/10.png"
+        alt=""
+        width="100%"
+        class="major-img"
+      />
+      <div class="text-center h5 py-2">عروض</div>
+    </div>
+    <div class="col-md-6 px-0">
+      <div class="row mx-0">
+        <div
+          class="col-6 category"
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 9 }"
+        >
+          <img
+            src="https://darkgraphix.com/s_images/22.png"
+            alt=""
+            width="100%"
+            class="m-0"
+            height="auto"
+          />
+          <div class="text-center h5 py-2">شنط ومحافظ</div>
+        </div>
+        <div
+          class="col-6 category"
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 13 }"
+        >
+          <img
+            src="https://darkgraphix.com/s_images/44.png"
+            alt=""
+            width="100%"
+            class="m-0"
+            height="auto"
+          />
+          <div class="text-center h5 py-2">هدايا</div>
+        </div>
+      </div>
+      <div class="row mx-0">
+        <div
+          class="col-6 category"
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 6 }"
+        >
+          <img
+            src="https://darkgraphix.com/s_images/33.png"
+            alt=""
+            width="100%"
+            class="m-0"
+            height="auto"
+          />
+          <div class="text-center h5 py-2">عطور</div>
+        </div>
+        <div
+          class="col-6 category"
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 14 }"
+        >
+          <img
+            src="https://darkgraphix.com/s_images/11.png"
+            alt=""
+            width="100%"
+            class="m-0"
+            height="auto"
+          />
+          <div class="text-center h5 py-2">ساعات</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-right h2 px-2 pt-5 pb-3">سلع مضافة حديثاً</div>
+
+  <div class="row mx-0 px-0 bg-white">
+    <div class="mx-0 px-1 w-100">
+      <div class="w-100 mt-5">
+        <!-- <div
+          ng2-carouselamos
+          class="slides-wrapper d-md-none d-block"
+          [items]="categories"
+          [$prev]="prev"
+          [width]="700"
+          [$next]="next"
+          [$item]="item"
+        ></div>
+        <div
+          ng2-carouselamos
+          class="slides-wrapper d-md-block d-none d-lg-none"
+          [items]="categories"
+          [$prev]="prev"
+          [width]="700"
+          [$next]="next"
+          [$item]="item"
+        ></div>
+        <div
+          ng2-carouselamos
+          class="slides-wrapper d-xl-none d-lg-block d-none"
+          [items]="categories"
+          [$prev]="prev"
+          [$next]="next"
+          [$item]="item"
+          [width]="950"
+        ></div> -->
+        <div
+          ng2-carouselamos
+          class="slides-wrapper text-right"
+          [items]="sliderProducts"
+          [$prev]="prev"
+          [$next]="next"
+          [$item]="item"
+          [width]="1350"
+        ></div>
+        <span dir="rtl">
+          <ng-template #next class="text-right ml-auto mr-0">
+            <i class="fa fa-chevron-right" aria-hidden="true" id="right"></i>
+          </ng-template>
+          <ng-template #prev class="text-left pl-0 ml-0">
+            <i class="fa fa-chevron-left" aria-hidden="true" id="left"></i>
+          </ng-template>
+        </span>
+        <ng-template
+          #item
+          let-item
+          let-i="index"
+          class="d-flex flex-column h-auto"
+        >
+          <div
+            dir="rtl"
+            class="
+              item
+              ml-auto
+              px-2
+              itemsContainer
+              font-weight-600
+              mb-5
+              col-xl-2 col-lg-3 col-md-4 col-6
+            "
+          >
+            <div class="p-3 bg-white shadow-light h-100 d-flex flex-column">
+              <div class="" style="position: relative">
+                <div class="overlay">
+                  <img
+                    class="w-100 product-img"
+                    src="../../assets/banner-3.jpg"
+                    alt="First slide"
+                  />
+                  <button
+                    class="btn btn-danger btn-sm middle"
+                    [routerLink]="['/product-details']"
+                    [queryParams]="{ id: item.id }"
+                  >
+                    تفاصيل المنتج
+                  </button>
+                </div>
+              </div>
+              <div class="pt-2 font-weight-bold break">
+                {{ item.titleArabic }}
+              </div>
+              <div class="text-muted pt-2 break">{{ item.descArabic }}</div>
+              <div class="small text-danger font-weight-bold mt-2">
+                {{ item.price }} دينار أردني
+              </div>
+              <div class="small text-muted mt-1">
+                {{ item.count }} قطع متوفرة
+              </div>
+              <div class="mt-auto pt-3 px-0">
+                <button
+                  class="btn btn-green-sm w-100"
+                  *ngIf="!inCart(item)"
+                  (click)="addToCart(item, 1)"
+                >
+                  أضف إلى العربة
+                  <img
+                    src="../../assets/add-to-cart.svg"
+                    height="18"
+                    class="mx-2 my-auto"
+                    width="auto"
+                    alt=""
+                  />
+                </button>
+                <div
+                  class="border row mx-0 h-48 mt-2 rounded px-0"
+                  *ngIf="inCart(item)"
+                  style="box-shadow: inset 0 0 12px #e2e1e1"
+                >
+                  <div
+                    class="col-2 border-left h-100 d-flex px-0"
+                    (click)="editQuantity(item, 1)"
+                  >
+                    <i class="fa fa-plus m-auto" aria-hidden="true"></i>
+                  </div>
+                  <div
+                    class="
+                      col-8
+                      m-auto
+                      text-center
+                      color-green
+                      font-weight-bold
+                      px-0
+                    "
+                  >
+                    <small class="mx-1"> ({{ getQuantity(item) }})</small> في
+                    العربة
+                  </div>
+                  <div
+                    class="col-2 h-100 d-flex border-right px-0"
+                    (click)="editQuantity(item, -1)"
+                  >
+                    <i class="fa fa-minus m-auto" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <!-- <div
+    id="carouselExampleControls"
+    class="carousel slide"
+    data-ride="carousel"
+    style="position: relative"
+  >
+    <div class="carousel-inner pb-2">
+      <div class="carousel-item active">
+        <div class="row mx-0 px-0">
+          <div class="col-xl-2 col-lg-3 text-right">
+            <div class="p-3 bg-white shadow-light">
+              <img
+                class="d-block w-100"
+                src="../../assets/banner-2.jpg"
+                alt="First slide"
+              />
+              <div class="pt-2">اسم القطعه</div>
+              <div class="small text-danger font-weight-bold mt-2">
+                20 دينار أردني
+              </div>
+              <div class="small text-muted mt-2">8 قطع متوفرة</div>
+              <div class="mt-3">
+                <button class="btn btn-sm bg-green text-white w-100">
+                  إضافة إلى العربة
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-2 col-lg-3 text-right">
+            <div class="p-3 bg-white shadow-light">
+              <img
+                class="d-block w-100"
+                src="../../assets/banner-2.jpg"
+                alt="First slide"
+              />
+              <div class="pt-2">اسم القطعه</div>
+              <div class="small text-danger font-weight-bold mt-2">
+                20 دينار أردني
+              </div>
+              <div class="small text-muted mt-2">8 قطع متوفرة</div>
+              <div class="mt-3">
+                <button class="btn btn-sm bg-green text-white w-100">
+                  إضافة إلى العربة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-3 text-right">
+            <div class="p-3 bg-white shadow-light">
+              <img
+                class="d-block w-100"
+                src="../../assets/banner-2.jpg"
+                alt="First slide"
+              />
+              <div class="pt-2">اسم القطعه</div>
+              <div class="small text-danger font-weight-bold mt-2">
+                20 دينار أردني
+              </div>
+              <div class="small text-muted mt-2">8 قطع متوفرة</div>
+              <div class="mt-3">
+                <button class="btn btn-sm bg-green text-white w-100">
+                  إضافة إلى العربة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-3 text-right">
+            <div class="p-3 bg-white shadow-light">
+              <img
+                class="d-block w-100"
+                src="../../assets/banner-2.jpg"
+                alt="First slide"
+              />
+              <div class="pt-2">اسم القطعه</div>
+              <div class="small text-danger font-weight-bold mt-2">
+                20 دينار أردني
+              </div>
+              <div class="small text-muted mt-2">8 قطع متوفرة</div>
+              <div class="mt-3">
+                <button class="btn btn-sm bg-green text-white w-100">
+                  إضافة إلى العربة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-3 text-right">
+            <div class="p-3 bg-white shadow-light">
+              <img
+                class="d-block w-100"
+                src="../../assets/banner-2.jpg"
+                alt="First slide"
+              />
+              <div class="pt-2">اسم القطعه</div>
+              <div class="small text-danger font-weight-bold mt-2">
+                20 دينار أردني
+              </div>
+              <div class="small text-muted mt-2">8 قطع متوفرة</div>
+              <div class="mt-3">
+                <button class="btn btn-sm bg-green text-white w-100">
+                  إضافة إلى العربة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-3 text-right">
+            <div class="p-3 bg-white shadow-light">
+              <img
+                class="d-block w-100"
+                src="../../assets/banner-2.jpg"
+                alt="First slide"
+              />
+              <div class="pt-2">اسم القطعه</div>
+              <div class="small text-danger font-weight-bold mt-2">
+                20 دينار أردني
+              </div>
+              <div class="small text-muted mt-2">8 قطع متوفرة</div>
+              <div class="mt-3">
+                <button class="btn btn-sm bg-green text-white w-100">
+                  إضافة إلى العربة
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a
+      class="carousel-control-prev"
+      href="#carouselExampleControls"
+      role="button"
+      data-slide="prev"
+      style="position: absolute; right: 0%; left: 93%"
+    >
+      <i class="fa fa-angle-right text-muted f-30" aria-hidden="true"></i>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#carouselExampleControls"
+      role="button"
+      data-slide="next"
+      style="position: absolute; left: -8%; right: 100%"
+    >
+      <i class="fa fa-angle-left text-muted f-30" aria-hidden="true"></i>
+    </a>
+  </div> -->
+  <div class="py-xl-5 py-md-3"></div>
+</div>

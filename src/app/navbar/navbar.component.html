@@ -1,0 +1,611 @@
+<span class="d-xl-block d-lg-block d-none"
+  ><div
+    class="row mx-0 text-white container-small py-2 small"
+    style="background-color: #232f3e"
+    dir="rtl"
+  >
+    <div class="col-6 text-right my-auto">
+      <div class="row mx-0">
+        <div class="w-auto">
+          <a routerLink="/contact-us" class="text-white contact">
+            تواصل معنا
+          </a>
+        </div>
+        <div class="w-auto text-right my-auto">
+          <i class="fa fa-facebook-square f-18 socail" aria-hidden="true"></i>
+        </div>
+        <div class="w-auto text-right my-auto px-1">
+          <i class="fa fa-instagram f-18 socail" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 my-auto text-left row mx-0" dir="ltr">
+      <div class="w-auto text-left">
+        <small dir="ltr">+962 79 700 4448 </small>
+      </div>
+      <div class="w-auto text-left" style="border-left: 0.5px solid #e4e2e2">
+        sallatiy.jo@gmail.com
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="row mx-0 py-2 container-small"
+    style="position: relative"
+    dir="rtl"
+  >
+    <!-- <div
+      *ngIf="show"
+      (clickOutside)="closeShoppingCart()"
+      class="bg-white border rounded px-0"
+      (mouseleave)="closeShoppingCart()"
+      style="
+        width: 305px;
+        position: absolute;
+        z-index: 999;
+        top: 76%;
+        left: 8.2%;
+        height: 315px;
+      "
+    >
+      <div
+        class="w-100 p-2"
+        style="height: 200px; overflow-y: hidden; overflow-y: auto"
+      >
+        <div class="py-1" style="max-height: 600px">
+          <div class="row mx-0 px-0 mb-3">
+            <div class="col-3 p-2 border">
+              <img
+                src="../../assets/banner-1-ar.jpg"
+                height="100%"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <div class="col-9 small">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit
+              <div class=""><small>الكمية : 2</small></div>
+            </div>
+          </div>
+          <div class="row mx-0 px-0 mb-3">
+            <div class="col-3 p-2 border">
+              <img
+                src="../../assets/banner-1-ar.jpg"
+                height="100%"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <div class="col-9 small">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit
+              <div class=""><small>الكمية : 2</small></div>
+            </div>
+          </div>
+          <div class="row mx-0 px-0">
+            <div class="col-3 p-2 border">
+              <img
+                src="../../assets/banner-1-ar.jpg"
+                height="100%"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <div class="col-9 small">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit
+              <div class=""><small>الكمية : 2</small></div>
+            </div>
+          </div>
+          <div class="row mx-0 px-0">
+            <div class="col-3 p-2 border">
+              <img
+                src="../../assets/banner-1-ar.jpg"
+                height="100%"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <div class="col-9 small">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit
+              <div class=""><small>الكمية : 2</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-white w-100"
+        style="
+          position: sticky;
+          bottom: 0;
+          overflow-y: hidden;
+          left: 0;
+          z-index: 99999;
+        "
+      >
+        <div class="f-18 font-weight-bold pb-2 pt-3 text-center">
+          المجموع الإجمالي : 222 د.أ
+        </div>
+        <div class="row mx-0">
+          <div class="col-6 px-2">
+            <button class="btn btn-grey w-100 h-100">تفاصيل العربة</button>
+          </div>
+          <div class="col-6 px-2">
+            <button
+              class="btn btn-green w-100"
+              style="font-size: 18px !important"
+            >
+              شراء
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="col-2 text-right px-0">
+      <img
+        src="../../assets/logo_sallaty.png"
+        routerLink="/"
+        alt=""
+        height="70"
+      />
+    </div>
+    <div class="col-xl-8 col-lg-7 d-flex" dir="ltr">
+      <div class="input-group my-auto">
+        <div class="input-group-prepend">
+          <button
+            class="btn btn-lg btn-danger rounded-0 f-20 px-4"
+            (click)="search(key.value)"
+            type="button"
+          >
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </div>
+        <input
+          type="text"
+          #key
+          class="form-control form-control-lg search"
+          placeholder="ما الذي تبحث عنه ؟"
+          aria-label=""
+          aria-describedby="basic-addon1"
+        />
+      </div>
+    </div>
+    <div class="col-xl-2 col-lg-3 my-auto row mx-0 px-0">
+      <div class="col-6 mx-auto text-center">
+        <i
+          class="fa fa-exchange mx-2"
+          aria-hidden="true"
+          style="font-size: 12px !important"
+        ></i>
+        <span class="font-weight-bold">العربية</span>
+      </div>
+      <div
+        class="col-6 text-center h-100"
+        style="border-right: 1px solid #c0bdbd; position: relative"
+      >
+        <a class="cart-link rounded py-3 px-2" routerLink="/checkout">
+          <img src="../../assets/cart.svg" class="mr-auto" height="30" alt="" />
+          <small
+            style="position: absolute; top: 0; left: 68%"
+            class="color-green font-weight-bold"
+            >{{ getProductsCount() }}</small
+          >
+          <span class="mx-1 h6 text-dark">العربة</span></a
+        >
+      </div>
+    </div>
+  </div>
+  <div class="container-small bg-grey py-2" dir="rtl">
+    <div class="row mx-0 f-nav my-auto px-2">
+      <div class="mx-auto w-auto px-1">
+        <a routerLink="/all-products" class="text-decoration-0 text-dark">
+          جميع الفئات</a
+        >
+      </div>
+      <div class="mx-auto w-auto px-1">
+        <a
+          class="text-decoration-0 text-dark"
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 1 }"
+        >
+          عروض
+        </a>
+      </div>
+      <div class="mx-auto w-auto px-1">
+        <a
+          class="text-decoration-0 text-dark"
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 13 }"
+        >
+          هدايا
+        </a>
+      </div>
+      <div class="mx-auto w-auto px-1">
+        <a
+          class="text-decoration-0 text-dark"
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 2 }"
+        >
+          ملابس
+        </a>
+      </div>
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 3 }"
+          class="text-decoration-0 text-dark"
+        >
+          ألعاب
+        </a>
+      </div>
+
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 15 }"
+          class="text-decoration-0 text-dark"
+        >
+          مستلزمات أطفال
+        </a>
+      </div>
+
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 5 }"
+          class="text-decoration-0 text-dark"
+        >
+          مستحضرات التجميل
+        </a>
+      </div>
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 6 }"
+          class="text-decoration-0 text-dark"
+        >
+          عطور
+        </a>
+      </div>
+
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 7 }"
+          class="text-decoration-0 text-dark"
+        >
+          نظارات</a
+        >
+      </div>
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 8 }"
+          class="text-decoration-0 text-dark"
+        >
+          إكسسوارات
+        </a>
+      </div>
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 9 }"
+          class="text-decoration-0 text-dark"
+        >
+          شنط ومحافظ
+        </a>
+      </div>
+
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 11 }"
+          class="text-decoration-0 text-dark"
+        >
+          أجهزة كهربائية
+        </a>
+      </div>
+      <div class="mx-auto w-auto">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 10 }"
+          class="text-decoration-0 text-dark"
+        >
+          أدوات منزلية
+        </a>
+      </div>
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 14 }"
+          class="text-decoration-0 text-dark"
+        >
+          ساعات
+        </a>
+      </div>
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 12 }"
+          class="text-decoration-0 text-dark"
+        >
+          إلكترونيات
+        </a>
+      </div>
+      <!--     <div class="mx-auto w-auto px-1">
+مستلزمات أطفال</div> -->
+
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 4 }"
+          class="text-decoration-0 text-dark"
+        >
+          نثريات
+        </a>
+      </div>
+    </div>
+  </div>
+</span>
+
+<span class="d-lg-none d-block">
+  <nav class="navbar navbar-default px-1 shadow-light" dir="rtl">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a
+          type="button"
+          class="navbar-toggle collapsed text-dark"
+          data-toggle="collapse"
+          data-target="#navbar"
+          aria-expanded="false"
+          aria-controls="navbar"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+        <a class="navbar-brand" routerLink="/"
+          ><img src="../../assets/logo_sallaty.png" alt="" height="50"
+        /></a>
+      </div>
+      <div class="row mx-0 px-0 col-4">
+        <div class="col-6 my-auto">
+          <span class="font-weight-bold">العربية</span>
+        </div>
+        <div class="col-6 my-auto text-center">
+          <a class="" routerLink="/checkout">
+            <img
+              src="../../assets/cart.svg"
+              class="mr-auto"
+              height="30"
+              alt=""
+            />
+            <small class="color-green font-weight-bold numOfProducts">{{
+              getProductsCount()
+            }}</small>
+          </a>
+        </div>
+      </div>
+
+      <div id="navbar" class="navbar-collapse collapse px-0">
+        <ul class="nav navbar-nav text-right pr-0">
+          <li class="active">
+            <a
+              routerLink="/"
+              type="button"
+              data-toggle="collapse"
+              aria-expanded="false"
+              data-target=".navbar-collapse.show"
+              >الصفحة الرئيسية</a
+            >
+          </li>
+          <li class="py-3">
+            <a
+              routerLink="/all-products"
+              data-toggle="collapse"
+              aria-expanded="false"
+              data-target=".navbar-collapse.show"
+              >جميع الفئات</a
+            >
+          </li>
+          <li class="dropdown pt-1 pb-3">
+            <a
+              class="dropdown-toggle"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >الفئات <span class="caret"></span
+            ></a>
+            <ul class="dropdown-menu text-right">
+              <li class="text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 1 }"
+                >
+                  عروض
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 13 }"
+                >
+                  هدايا
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 2 }"
+                >
+                  ملابس
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 3 }"
+                >
+                  ألعاب
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 15 }"
+                >
+                  مستلزمات أطفال
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 5 }"
+                >
+                  مستحضرات التجميل
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 6 }"
+                >
+                  عطور
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 7 }"
+                >
+                  نظارات
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 8 }"
+                >
+                  إكسسوارات
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 9 }"
+                >
+                  شنط ومحافظ
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 11 }"
+                >
+                  أجهزة كهربائية
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 10 }"
+                >
+                  أدوات منزلية
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 14 }"
+                >
+                  ساعات
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 12 }"
+                >
+                  إلكترونيات
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 4 }"
+                >
+                  نثريات
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav text-right pr-0 border-top">
+          <li class="pt-3 h-auto">
+            <div class="row mx-0 px-0 my-auto h-100 mb-0 pb-0">
+              <div class="col-md-2 col-3 text-right pr-0 my-auto mb-0 pb-0">
+                <a href="../navbar-static-top/"
+                  ><i class="fa fa-facebook-square"></i>
+                </a>
+                <a href="../navbar-static-top/" class="mx-2"
+                  ><i class="fa fa-instagram"></i>
+                </a>
+              </div>
+              <div class="col-9 col-md-10 h-100 mb-0 pb-0 text-left">
+                <a
+                  routerLink="/contact-us"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  >تواصل معنا</a
+                >
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</span>

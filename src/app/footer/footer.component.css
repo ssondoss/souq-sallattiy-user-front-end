@@ -1,0 +1,17 @@
+.text-muted2 {
+  color: #9b9999;
+}
+.info {
+  animation: up 2.3s infinite ease-in-out;
+}
+@keyframes up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  0% {
+    transform: translateY(0);
+  }
+}
