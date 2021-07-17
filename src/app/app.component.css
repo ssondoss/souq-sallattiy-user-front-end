@@ -110,7 +110,7 @@ html {
 .text-decoration-0:hover {
   text-decoration: underline !important;
 }
-@media screen and (max-width: 1675px) {
+@media screen and (max-width: 1440px) {
   .container-small {
     padding-left: 17px !important;
     padding-right: 17px !important;
