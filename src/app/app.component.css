@@ -110,13 +110,16 @@ html {
 .text-decoration-0:hover {
   text-decoration: underline !important;
 }
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1675px) {
   .container-small {
     padding-left: 17px !important;
     padding-right: 17px !important;
   }
   .f-nav {
     font-size: 11px !important;
+  }
+  .araba {
+    display: none;
   }
 }
 
