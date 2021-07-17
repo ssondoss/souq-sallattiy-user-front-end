@@ -118,8 +118,19 @@ html {
   .f-nav {
     font-size: 11px !important;
   }
+}
+@media screen and (max-width: 1099px) and (min-width: 1023px) {
   .araba {
-    display: none;
+    position: absolute !important;
+    left: 64% !important;
+    top: 0 !important;
+  }
+}
+@media screen and (max-width: 1243px) and (min-width: 1099px) {
+  .araba {
+    position: absolute !important;
+    left: 62.5% !important;
+    top: 0 !important;
   }
 }
 
