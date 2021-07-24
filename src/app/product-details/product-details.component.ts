@@ -67,4 +67,7 @@ export class ProductDetailsComponent implements OnInit {
     }
     localStorage.setItem('shopping-cart', JSON.stringify(this.arrayItems));
   }
+  getImage(image: any) {
+    return environment.imageURL + image;
+  }
 }

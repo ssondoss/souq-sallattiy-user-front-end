@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import { ApplicationStateService } from '../app.service';
 
 @Component({
   selector: 'navbar',
@@ -9,7 +11,10 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
   show = false;
   showSide = false;
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    public appService: ApplicationStateService
+  ) {}
   showFiller = false;
 
   ngOnInit(): void {}

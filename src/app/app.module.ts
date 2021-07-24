@@ -18,8 +18,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { ProductDetailsComponent } from './product-details/product-details.component';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ApplicationStateService } from './app.service';
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,13 +42,20 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     BrowserModule,
     AppRoutingModule,
     PopoverModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
     MatFormFieldModule,
     BrowserAnimationsModule,
     Ng2CarouselamosModule,
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [ApplicationStateService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

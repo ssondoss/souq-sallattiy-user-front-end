@@ -25,6 +25,8 @@
     "@material/dialog": "^11.0.0",
     "@material/drawer": "^11.0.0",
     "@material/form-field": "^11.0.0",
+    "@ngx-translate/core": "^13.0.0",
+    "@ngx-translate/http-loader": "^6.0.0",
     "angular-material": "^1.2.2",
     "bootstrap": "^5.0.2",
     "font-awesome": "^4.7.0",
