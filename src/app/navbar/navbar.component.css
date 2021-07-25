@@ -49,3 +49,10 @@
   border: 1.2px solid rgb(150, 149, 149);
   direction: rtl;
 }
+.lang {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+.lang:hover {
+  text-decoration: underline !important;
+}
