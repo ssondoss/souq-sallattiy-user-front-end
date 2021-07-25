@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  api: 'http://sallatiy.com/api/',
-  images: 'http://sallatiy.com/static/',
+  apiURL: 'http://sallatiy.com/api/',
+  imageURL: 'http://sallatiy.com/static/',
 };
