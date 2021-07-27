@@ -25,7 +25,9 @@
             <div class="text-muted pt-0 mt-0 break">
               {{ product.product.descArabic }}
             </div>
-            <div class="mt-2 text-danger font-weight-bold">11 دينار أردني</div>
+            <div class="mt-2 text-danger font-weight-bold">
+              {{ product.price }} دينار أردني
+            </div>
           </div>
           <div class="col-lg-3 text-right row ml-auto mt-lg-0 mt-3 px-0">
             <div class="col-6 mr-0 col-lg-12 px-lg-0 px-xl-2 px-3">
@@ -94,6 +96,29 @@
               <span class="mx-2">دينار أردني</span>
             </div>
           </div>
+          <div class="row mx-0 h5" *ngIf="city != ''">
+            <div class="w-auto my-auto px-0 h4">التوصيل :</div>
+            <div class="w-auto my-auto text-danger">
+              <span
+                class="font-weight-bold"
+                style="text-decoration: line-through 2px"
+                *ngIf="city == 'amman'"
+              >
+                3
+              </span>
+              <span
+                class="font-weight-bold"
+                style="text-decoration: line-through 2px"
+                *ngIf="city != 'amman'"
+              >
+                5</span
+              >
+              <span class="mx-2" style="text-decoration: line-through 2px"
+                >دينار أردني</span
+              >
+              <span class="mx-2" dir="ltr"> (30/9/2021) توصيل مجاني حتى </span>
+            </div>
+          </div>
         </div>
         <div class="bg-white shadow-light p-md-4 p-3 rounded">
           <div class="h5 text-center py-2">تفاصيل التوصيل</div>
@@ -160,7 +185,12 @@
 
               <div class="form-group col-6 pl-0">
                 <label>المدينة</label>
-                <select class="form-control" formControlName="city" required>
+                <select
+                  class="form-control"
+                  formControlName="city"
+                  required
+                  (change)="cityChanged($event)"
+                >
                   <option value="amman">عمان</option>
                   <option value="balqaa">البلقاء</option>
                   <option value="irbid">إربد</option>

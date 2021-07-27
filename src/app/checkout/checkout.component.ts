@@ -69,7 +69,14 @@ export class CheckoutComponent implements OnInit {
   }
 
   placeOrder() {
-    if (this.orderForm.valid && this.products.length > 0)
+    if (this.orderForm.valid && this.products.length > 0) {
+      let total: number;
+      total = this.getTotal();
+      if (this.city == 'amman') {
+        total += 3;
+      } else {
+        total += 5;
+      }
       this.http
         .post(environment.apiURL + 'order', {
           name: this.orderForm.controls['name'].value,
@@ -93,7 +100,7 @@ export class CheckoutComponent implements OnInit {
           });
           this.orderForm.reset();
         });
-    else if (this.products.length == 0) {
+    } else if (this.products.length == 0) {
       swal.fire({
         position: 'center',
         icon: 'warning',
@@ -106,5 +113,11 @@ export class CheckoutComponent implements OnInit {
 
   getImage(image: any) {
     return environment.imageURL + image;
+  }
+
+  city: string = '';
+
+  cityChanged(event: any) {
+    this.city = event.target.value;
   }
 }
